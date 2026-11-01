@@ -17,11 +17,18 @@
   header .meta{margin-top:22px;font-family:'Segoe UI',sans-serif;font-size:13px;color:#a9bda0;letter-spacing:.06em;}
   main{max-width:820px;margin:0 auto;padding:64px 28px 80px;}
   .stage{display:flex;justify-content:center;margin:20px 0 14px;}
-  video{
-    width:min(380px, 90vw);border-radius:12px;background:#000;
+  .yt{
+    position:relative;border-radius:12px;overflow:hidden;background:#000;
     box-shadow:0 18px 60px rgba(30,58,36,.28);
   }
-  video.landscape{width:min(640px,92vw);}
+  .yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+  .yt.portrait{width:min(360px,88vw);aspect-ratio:9/16;}
+  .yt.landscape{width:min(640px,92vw);aspect-ratio:16/9;}
+  .direct{
+    text-align:center;font-family:'Segoe UI',sans-serif;font-size:12.5px;
+    letter-spacing:.05em;margin-top:14px;
+  }
+  .direct a{color:var(--moss);text-decoration:none;border-bottom:1px solid var(--moss-light);}
   section.piece{margin-bottom:64px;}
   section.piece h2{
     max-width:640px;margin:0 auto 6px;font-size:22px;font-weight:normal;color:var(--moss-deep);
@@ -57,24 +64,23 @@
     <h2>Boston Music Festival — Competition Entry</h2>
     <div class="piece-meta">UPLOADED: SEPTEMBER 6, 2026 · COMPETITION ENTRY · 4′49″</div>
     <div class="stage">
-      <video controls preload="metadata" playsinline poster="">
-        <source src="media/violin-boston.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+      <div class="yt portrait">
+        <iframe src="https://www.youtube.com/embed/OK4kSJjEeuQ" title="Violin — Boston Music Festival Competition Entry" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
     </div>
+    <div class="direct"><a href="media/violin-boston.mp4">Play the direct MP4 instead</a></div>
     <p>A competition entry recorded for the Boston Music Festival — one take, no edits. Music has been a parallel discipline alongside the field notes on this site: the same patience that kneels to watch moss also practices a passage for the fiftieth time.</p>
-    <div class="note">Tip: the video is in portrait orientation, as recorded. On desktop it plays in a theatre-style frame; on mobile it fills naturally.</div>
   </section>
 
   <section class="piece">
     <h2>ABRSM Grade 8 — Examination Video</h2>
     <div class="piece-meta">UPLOADED: SEPTEMBER 20, 2026 · GRADED EXAMINATION · 6′15″</div>
     <div class="stage">
-      <video class="landscape" controls preload="metadata" playsinline poster="">
-        <source src="media/violin-abrsm-g8.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+      <div class="yt landscape">
+        <iframe src="https://www.youtube.com/embed/VirtTfFqeK0" title="ABRSM Grade 8 Violin Examination" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
     </div>
+    <div class="direct"><a href="media/violin-abrsm-g8.mp4">Play the direct MP4 instead</a></div>
     <p>The complete recorded examination for ABRSM Grade 8 — the highest of the board's graded exams. Where the festival recording captures a single stage, this one documents years of scales, studies, and slow practice compressed into six unbroken minutes.</p>
   </section>
 
